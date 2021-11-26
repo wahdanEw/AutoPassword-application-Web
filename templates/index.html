@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}AutoPassword{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="outer">
+            <div class="details">
+                <h1>Welcome sir, Please choose an a strong password:</h1><br><br>
+                <form action="" method="GET">
+                    <label class="pwd-len" for="pwd-select">Password Length:</label>
+                    <select id="pwd" name="pwd-select">
+                        <option value="" selected>choice</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                    </select>
+                </form><br><br>
+            </div>
+        </div>
+    </div>
+    <button id="btn" class="btn btn-outline-primary btn-style">Generate Password</button>
+    <p id=""></p>
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label label-style">Your New Password:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="result">
+            <button class="btn btn-outline-primary btn-style2" onclick="copyFunction()">Copy Password</button>
+        </div>
+    </div>
+    <dev class="signature">
+        <img src= "{{ url_for('static', filename='images/Wahsignature.png')}}" alt="signatureLogo">
+    </dev>
+{% endblock %}
